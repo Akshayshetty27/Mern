@@ -11,11 +11,60 @@
 // }
 
 // export default App;
-function App()
-{
-  return <div>
-  <h1>hello</h1>
+// function App()
+// {
+//   const abc=()=>
+//   {
+//     console.log("hello")
+//   }
+//   const name="Akshay"
+//   // const age=21
+//   return <div>
+//   <h1>hello {name}</h1>
+//   <button onClick={ abc }
+//   > Change user </button>
   
-  </div>
+//   </div>
+// }
+// export default App;
+// import React from 'react'
+
+// const App = () => {
+
+//   let user= "Akshay";
+  
+//  const changeuser=()=>{
+//   console.log(user)
+//     user="shetty"
+//     console.log(user)
+
+//   }
+//   return (
+//     <div>
+//       <h1>hello {user}</h1>
+//       <button onClick={changeuser}>change user</button>
+//     </div>
+//   )
+// }
+import React, { useState } from 'react'
+
+const App = () => {
+let [a, setA] = useState(0)
+const changeA=()=>
+{
+  setA(a=a+1)
 }
-export default App;
+const decrementA=()=>
+{
+  setA(a=a-1)
+}
+  return (
+    <div>
+      <h1> value of a :{a}</h1>
+      <button onClick={changeA}> Increment </button>
+      <button onClick={decrementA}> Decrement </button>
+    </div>
+  )
+}
+
+export default App

@@ -1,4 +1,10 @@
 body{
-    background-color: red;
-    color: yellow;
+    background-color:#111;
+    color: aliceblue;
+}
+button{
+   padding: 5px 10px;
+   margin: 10px;
+    background-color: rgb(111, 111, 223);
+    border-radius: 10px;
 }

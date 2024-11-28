@@ -10,6 +10,8 @@
 // </div>
 // }
 
+// import { useState } from "react"
+
 // export default App;
 // function App()
 // {
@@ -46,24 +48,96 @@
 //     </div>
 //   )
 // }
-import React, { useState } from 'react'
+// import  { useState } from 'react'
+
+// const App = () => {
+//   // start 
+// let [a, setA] = useState(0)
+// const changeA=()=>
+// {
+//   setA(a=a+1)
+// }
+// const decrementA=()=>
+// {
+//   setA(a=a-1)
+// }
+//   return (
+//     <div>
+//       <h1> value of a :{a}</h1>
+//       <button onClick={changeA}> Increment </button>
+//       <button onClick={decrementA}> Decrement </button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+
+// import  { useState } from 'react'
+// const App = () => {
+
+//   let [a ,change]=useState(0)
+//   const changeState =()=>
+//   {
+//     change(a=a+1)
+//   }
+//   const changeA =()=>
+//   {
+//     change(a=a-1)
+//   }
+//   return (
+//     <div>
+//     <h1>count : {a}</h1>
+//     <button onClick={changeState}>Increment</button>
+//     <button onClick={changeA}>Decrement</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import { Fragment } from 'react'
+// import React from 'react'
+
+
+
+// import Header from './components/Header'
+// import Footer from './Footer'
+// import Nav2 from './Nav2'
+
+// const App = () => {
+//   return (
+//     <>
+//     <nav className=' flex items-center'>
+//       <Header/>
+//       <Nav2/>
+//       <div>
+//         <h3>About</h3>
+//         <h3>Contact</h3>
+//         <h3> Services</h3>
+//         <h3>Your Account </h3>
+//       </div>
+//     </nav>
+//     <Footer/>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+import Card from './components/Card'
 
 const App = () => {
-let [a, setA] = useState(0)
-const changeA=()=>
-{
-  setA(a=a+1)
-}
-const decrementA=()=>
-{
-  setA(a=a-1)
-}
+  const userr="akshay"
   return (
-    <div>
-      <h1> value of a :{a}</h1>
-      <button onClick={changeA}> Increment </button>
-      <button onClick={decrementA}> Decrement </button>
-    </div>
+
+   <>
+   <Card  a={userr}  city="Bhopal" age={45}/>
+   </>
   )
 }
 

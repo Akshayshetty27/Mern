@@ -1,10 +1,22 @@
 body{
-    background-color:#111;
-    color: aliceblue;
+    background-color: rgb(0,0,0);   
+}
+form input{
+    color: black;
 }
 button{
    padding: 5px 10px;
    margin: 10px;
-    background-color: rgb(111, 111, 223);
+    background-color: rgb(215, 58, 115);
     border-radius: 10px;
+}
+h1{
+    background-color: rgb(215, 58, 115);
+    border-radius: 10px;
+    color: azure;
+}
+h2{
+    background-color: rgb(215, 58, 115);
+    border-radius: 10px;
+    color: azure;   
 }

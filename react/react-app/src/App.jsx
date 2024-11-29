@@ -128,16 +128,68 @@
 
 
 
+// import React from 'react'
+// import Card from './components/Card'
+
+// const App = () => {
+
+//   const users=[
+//     {
+//       userName: "JohnDoe",
+//       city: "New York",
+//       age: 30,
+//       profession: "Software Engineer",
+//       photo: "https://example.com/photos/johndoe.jpg"
+//     },
+//     {
+//       userName: "JaneSmith",
+//       city: "San Francisco",
+//       age: 28,
+//       profession: "Graphic Designer",
+//       photo: "https://example.com/photos/janesmith.jpg"
+//     },
+//     {
+//       userName: "MichaelBrown",
+//       city: "Chicago",
+//       age: 35,
+//       profession: "Data Scientist",
+//       photo: "https://example.com/photos/michaelbrown.jpg"
+//     },
+//     {
+//       userName: "EmilyDavis",
+//       city: "Austin",
+//       age: 25,
+//       profession: "Marketing Specialist",
+//       photo: "https://example.com/photos/emilydavis.jpg"
+//     }
+//   ]
+
+//   return (
+
+//    <>
+//     {
+//     users.map(function(elem){
+//     return <><Card userName={elem.userName} age={elem.age}/>
+//     </>
+//   })
+// }
+//    </>
+//   )
+// }
+
+// export default App
+
+
+
 import React from 'react'
-import Card from './components/Card'
-
+import Ex from './components/Ex'
 const App = () => {
-  const userr="akshay"
-  return (
+ 
 
-   <>
-   <Card  a={userr}  city="Bhopal" age={45}/>
-   </>
+  return (
+  <>
+    <Ex name="akshay"/>
+  </>  
   )
 }
 

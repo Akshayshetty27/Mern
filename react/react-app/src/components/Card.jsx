@@ -21,7 +21,7 @@ const Card = (props) => {
     <div>
 
         <h1>
-            UserName  :{props.a}
+            UserName  :{props.userName}
         </h1>
         <h2> City :{props.city} ,Age :{props.age}</h2>
         <button>Add Friend </button>

@@ -4,14 +4,17 @@
 import './App.css'
 import Fc from './components/Functioon_components'
 import Classcomponents from './components/Classcomponents'
-import Click from './components/Click'
+// import Click from './components/Click'
+import Parent from './components/Parent'
+
 
 function App() {
   return (
     <div>
      <Fc/>
      <Classcomponents/>
-     <Click/>
+     {/* <Click/> */}
+     <Parent/>
     </div>
   )
 }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: hsl(0,0% ,90%);
+        }
+
+        #con{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 3px solid black;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+
+        }
+        #display{
+                font-size: 5rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     
+                font-weight: bold;
+                color: hsl(0,0%,1%); 
+                text-shadow: 2px 2px 2px;
+                margin-bottom: 50px;
+            
+            }
+
+            #controles button{
+                font-size: 1.5rem;
+
+                font-weight: bold;
+                border: none;
+                border-radius: 10px;
+                cursor:pointer ;
+                min-width: 125px;
+                transition: background-color 1.5s ease ;
+            }
+
+            #start
+            {
+                color: beige;
+
+                background-color: hsl(115, 100%, 40%);
+            }
+            #start:hover
+            {
+                background-color: hsl(115, 100%, 30%)
+            }
+            #stop
+            {
+                background-color: hsl(0, 88%, 50%);
+                color: beige;
+            }
+            #stop:hover{
+                background-color: hsl(0, 88%, 44%);
+   
+            
+            }
+
+            #reset
+            {
+                background-color: hsl(245, 88%, 50%);
+                color: beige;
+            }
+            #reset:hover{
+                background-color: hsl(245, 88%, 60%);
+   
+            
+            }
+    </style>
+</head>
+<body>
+    <h1> Stop watch </h1>
+    <div id="con">
+        <div id="display">
+                00 : 00 : 00 : 00 
+        </div>
+        <div id="controles">
+            <button id="start"onclick="start()"> start </button>
+            <button id="stop"onclick="stop()"> stop </button>
+            <button id="reset"onclick="reset()"> reset  </button>
+
+            
+        </div>
+    </div>
+    
+</body>
+<script>
+const display= document.getElementById("display");
+let timer = null;
+let starttime=0;
+let ellpsedtime=0;
+let isrunning=false;
+
+function start()
+{
+    if(!isrunning)
+    {
+        starttime = Date.now() - ellpsedtime;
+        timer = setInterval(update ,50);
+        isrunning=true;
+        }
+
+}
+function stop()
+{
+if(isrunning)
+{
+    clearInterval(timer);
+    ellpsedtime=Date.now()- starttime;
+    isrunning=false;
+}
+}
+function reset()
+{
+    display.textContent =`00: 00 : 00 : 00`;
+    starttime=0;
+    ellpsedtime=0;
+
+}
+function update()
+{
+const currenttime= Date.now();
+ellpsedtime = currenttime- starttime;
+
+let hours= Math.floor(ellpsedtime/(1000 * 60 * 60 ));
+let minnutes= Math.floor(ellpsedtime/(1000 * 60) %60);
+let sec= Math.floor(ellpsedtime / (1000) %60);
+let millisec= Math.floor(ellpsedtime %60 );
+
+hours = String(hours).padStart(2,"0");
+minnutes = String(minnutes).padStart(2,"0");
+sec = String(sec).padStart(2,"0");
+millisec = String(millisec).padStart(2,"0");
+
+display.textContent = ` ${hours} : ${minnutes} : ${sec} : ${millisec}`;
+}
+</script>
+</html>

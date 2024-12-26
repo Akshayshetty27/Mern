@@ -1,0 +1,42 @@
+body{
+  /* background-color: white; */
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  background-color: azure;
+}
+
+.card{
+border:  1px solid black;
+margin: 10px;
+
+max-width: 300px;
+display: inline-block;
+box-shadow: 10px 5px 5px hsla(0, 0%, 0%, 0.282);
+align-items: center;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.cardimg{
+  height: 100px;
+  width: 70px;
+}
+
+.title{
+font-size:x-large;
+font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  justify-content: center;
+  align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsla(0, 10%, 10%, 0.537);
+}

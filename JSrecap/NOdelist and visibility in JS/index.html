@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: auto;
+            margin: 50px;
+            border:2px solid;
+            border-radius: 10%;
+
+        }
+        
+        button{
+            font-size: 2rem;
+             
+        }
+        .con{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .mybtns{
+            font-size: 2rem;
+            border: none;
+             margin: 10px;
+            max-width: 125px;
+             border-radius: 5px;
+             padding: 10px ;
+            gap: 10px;
+            background-color: hsl(212, 73%, 64%);
+            color: white;
+        }
+
+
+        #mybtn{
+            font-size: 2rem;
+            border: none;
+
+        
+
+            margin: 50px;
+        }
+        .enabled{
+            background-color: hsl(195, 52%, 58%);
+          color: white;
+          font-size: 2rem;
+          
+
+        }
+
+        .hover{
+            background-color: yellowgreen;
+            font-size: 2rem;
+            border: none;
+            border-radius: 10px;
+            margin: 50px;
+            box-shadow: 10px 10px 10px rgb(10, 11, 8);
+            font-weight: bold;
+
+        }
+    </style>
+
+</head>
+<body>  
+    <img id="myimage"src="image.webp" alt="this is Bugatti">
+    <button id="btn" onclick="change()"> hide me </button>
+
+
+
+
+    <br><br>
+
+    <h1>   Node-list in JS </h1>
+
+<div class="con">
+
+
+
+    <button class="mybtns">click</button>
+    <button class="mybtns">click</button>
+    <button class="mybtns">click</button>
+    <button class="mybtns">click</button>
+</div>
+
+
+<h1>  Class list in JS </h1>
+
+<button id="mybtn"class="mybtns">
+My btn 
+</button>
+</body>
+<script src="script.js"></script>
+</html>

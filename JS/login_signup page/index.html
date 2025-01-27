@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: hsl(0, 6%, 10%);
+            padding: 0;
+            margin-top: 15vh;
+            display: flex;
+            justify-content: center;
+           
+        }
+        .con{
+            align-items: center;
+            height: 50vh;
+            width: 50vw;
+            background-color: hsl(60, 36%, 43%);
+
+        }
+        .buttons{
+          
+
+            background-color: black;
+            height: 30%;
+            width: 98%;
+            border-radius: 100px;
+            justify-content: center;
+            margin:5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10%;
+
+        }
+        button {
+            background-color: blanchedalmond;
+            margin-top:10% ;
+            height: 35%;
+            width: fit-content;
+            position: relative;
+            border-radius: 10%;
+
+          
+
+        }
+
+        .content{
+            height: 60%;
+            width: auto;
+            border-radius: 50%;
+    
+            background-color: hsl(320, 43%, 4%);
+            
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        
+        }
+        input{
+            margin-top: 5%;
+            border-radius: 10%;
+            background-color: rgba(128, 128, 128, 0.842);
+
+
+        }
+        input::placeholder{
+            color: rgb(12, 8, 0);
+        }
+    #submit{
+        height: 12%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        }
+        #email
+        {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="buttons">
+            <button id="login" >login
+
+            </button>
+            <button id="signup" onclick="click">  
+                sign-up
+            </button>
+        </div>
+        <div class="content">
+            <input type="email"id="email"placeholder="enter your username"
+            />
+            <input type="text"id="username"placeholder="enter your username"/>
+           
+            <input type="password"placeholder="enter your password"/>
+            <button id="submit">submit</button>
+        </div>
+
+      
+        
+       
+    </div>
+    
+</body>
+<script src="index.js
+"></script>
+</html>

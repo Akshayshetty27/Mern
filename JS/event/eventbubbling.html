@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .con{
+        height: 30vh;
+        width: 40vw;
+        background-color: yellowgreen;
+    }
+    .child{
+        cursor:progress;
+    
+    }
+    .childspan{
+        cursor: pointer;
+        background-color: peachpuff;
+        height: 20%;
+        width: auto;
+    }
+</style>
+<body>
+    <div class="con">
+        <div class="childspan">
+            <div class="child">
+                i am  a child 
+            </div>
+
+        </span>
+
+    </div>
+    
+</body>
+<script>
+    document.querySelector(".child").addEventListener("click",(e)=>{
+        console.log(e);
+        e.stopPropagation();
+        alert(" you have clicked the child box ")
+    })
+    document.querySelector(".childspan").addEventListener("click",(e)=>{
+        e.stopPropagation();
+
+        alert(" you have clicked right inside the container shild span   ")})
+
+    document.querySelector(".con").addEventListener("click",(e)=>{
+        e.stopPropagation();
+
+        alert(" you have clicked right inside the container  ")
+    })
+</script>
+</html>

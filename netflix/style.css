@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;    
+}
+.main{
+    height:  70vh;
+    position: relative;
+background-position: center center;
+background-repeat: no-repeat;
+    background-image: url("assets/images/backimg.jpg");
+    background-size: max( 1000px , 100vw);
+    
+}
+.main .box{
+    height: 70vh;
+    width: 100%;
+    opacity: 0.74;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav
+{
+    justify-content: space-between;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    max-width: 80vw;
+    margin: auto;
+}
+nav img{
+    width: 114px;
+    position:  relative ;
+    z-index: 10;
+}
+nav button
+{
+    position:  relative ;
+    z-index: 10;
+
+}
+body{
+    background-color: black;
+}
+
+.hero
+{
+    height: calc(100% - 56px);
+    padding:0 30px;
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   gap: 18px;
+    color: white ;
+}
+
+.hero>:first-child
+{
+    font-size: 48px;
+    text-align: center;
+    font-weight: 900;
+}
+.hero >:nth-child(2)
+{
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+
+}
+.hero>:nth-child(3){
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.hero span
+{
+    justify-content: center;
+    align-items: center;
+    font-size:large;
+}
+
+.sep
+{
+    height: 7px;
+background-color: rgba(128, 128, 128, 0.333);
+/* position: relative; */
+}
+
+.btn
+{
+    padding: 3px 8px ;
+    font-weight: bold;
+    height: 100%;
+    color: azure;
+
+}
+.red-sm
+{
+background-color: red;
+color: azure;
+}
+
+.btn-red
+{
+    background-color: red;
+    color: azure;
+    padding: 3px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: larger;
+
+
+}
+
+.main input
+{
+height: 30px;
+padding: 3px 24px;
+border-radius: 4px;
+font-weight: bold;
+background-color: rgba(23, 23, 23, 0.333);
+
+}

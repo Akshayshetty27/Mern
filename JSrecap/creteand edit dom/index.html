@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+  </body>
+  <script>
+    function add(langname) {
+      let va = document.createElement("li");
+      va.innerText = langname;
+      document.querySelector(".language").appendChild(va);
+    }
+
+    add("Java");
+    add("python");
+    add("react");
+
+    function optimizedway(langname) {
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode(langname));
+      document.querySelector(".language").appendChild(li);
+    }
+    optimizedway("ruby");
+
+    // edit
+
+    let seclang = document.querySelector("li:nth-child(2)");
+    let newli = document.createElement("li");
+    newli.textContent = "mojo";
+    seclang.replaceWith(newli);
+
+    // remove
+    let lii = document.querySelector("li:nth-child(3)");
+    console.log(lii.textContent);
+    lii.remove();
+  </script>
+</html>

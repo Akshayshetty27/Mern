@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    header {
+      margin: 0px 40% 0px;
+    }
+    .weight {
+      background-color: plum;
+    }
+  </style>
+  <body>
+    <header>BMI CALCULATOR</header>
+    <main>
+      Enter your Weight :
+      <input type="text" id="w" placeholder="enter your weight " />
+      <br />
+      <marquee behavior="" direction="right" "> this is bmi calculator application </marquee>
+      <br />
+      enter your height :<input
+        type="text"
+        id="w"
+        placeholder="enter your weight "
+      />
+      <br>      <br>      <br>
+
+<button id="submit"> submit </button>
+
+    </main>
+  </body>
+  <script>
+    let btn = document.getElementById("submit");
+
+btn.addEventListener("click", () => {
+    let weight = document.getElementById("w").innerText.trim(); // Trim spaces
+    let numericWeight = Number(weight);
+
+    if (!isNaN(numericWeight)) {
+        console.log(numericWeight); 
+    } else {
+        console.log("Invalid number in #w element");
+    }
+});
+
+  </script>
+</html>

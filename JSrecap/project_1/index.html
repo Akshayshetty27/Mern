@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        height: 50%;
+        width: 100%;
+        border: 2px solid black;
+        display: flex;
+        background-color: plum;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .box {
+        margin: 20px;
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        gap: 10px;
+      }
+      #box1 {
+        background-color: yellow;
+      }
+      #box2 {
+        background-color: blue;
+      }
+      #box3 {
+        background-color: orange;
+      }
+      #box4 {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+      <div class="box" id="box4"></div>
+    </div>
+  </body>
+  <script>
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach((box) => {
+      console.log(box);
+      box.addEventListener("click", (e) => {
+        if (e.target.id == "box1") {
+          document.body.style.backgroundColor = "yellow";
+        } else if (e.target.id == "box2") {
+          document.body.style.backgroundColor = "blue";
+        } else if (e.target.id == "box3") {
+          document.body.style.backgroundColor = "orange";
+        } else if (e.target.id == "box4") {
+          document.body.style.backgroundColor = "cyan";
+        }
+      });
+    });
+  </script>
+</html>

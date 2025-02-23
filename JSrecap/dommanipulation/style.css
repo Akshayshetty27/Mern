@@ -1,0 +1,10 @@
+#bg{
+    background-color: cyan;
+}
+
+.main{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+}

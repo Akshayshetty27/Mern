@@ -141,3 +141,71 @@ console.log(`hello ${user}`)
     console.log("databse connected ")
 })();
 
+
+
+// high order loops
+
+
+
+
+
+let arrofobj=[
+    {
+        username :"Akshay",
+        USN: "4MT21IS004"
+    },
+    {
+         username :"amaran",
+        USN: "4MT21IS014"
+
+    },
+    {
+ username :"Araan",
+        USN: "4MT21IS234"
+    }
+]
+console.log(" \n\n\n\n")
+
+let count=0;
+for( i of arrofobj)
+{
+    let arr= Object.keys(i);
+    console.log(" student "+(++count))
+    for( j of arr)
+    {
+        console.log(" "+j+ " "+i[j]);
+    }
+    
+}
+// for( i in arr)
+// {
+//     console.log(" "+arr[i]);
+// }
+// for( i of arr){
+//     console.log(i);
+// }
+
+
+const map = new Map();
+map.set("IN","INDIA");
+map.set("USA","UNITED STATES OF AMERICA");
+map.set("USA","UNITED STATES OF AMERICA");
+map.set("AUS","AUSTRALIA ");
+console.log( map);
+
+for( const [key,value] of map)
+{
+    console.log( key  ," : "+value);
+}
+console.log(" \n\n\n\n")
+
+
+
+
+// for each loop 
+let arr=[4,5,6,77,4,3,];
+arr.forEach( i => {
+ console.log(i*i);
+});
+
+

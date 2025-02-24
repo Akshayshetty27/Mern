@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey;
+        height: 100vh;
+        margin: 0;
+      }
+      input {
+        margin: 10px;
+        height: 40px;
+        width: 100px;
+      }
+      .box {
+        margin-top: 50px;
+        min-height: 40vh;
+        min-width: 40vw;
+        border: 2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Guess the Number (1-10)</h2>
+      <input type="number" id="input" />
+      <p id="guess">Guessed numbers:</p>
+      <button id="submit">Submit Guess</button>
+      <p id="result"></p>
+    </div>
+  </body>
+  <script>
+    let win = false;
+    let count = 0;
+    let computernumber = Math.floor(Math.random() * 10) + 1;
+    console.log("Computer Number:", computernumber);
+
+    let guessarry = document.getElementById("guess");
+    let submitbtn = document.getElementById("submit");
+    let resultMessage = document.getElementById("result");
+
+    submitbtn.addEventListener("click", () => {
+      let guessednumber = parseInt(document.getElementById("input").value);
+
+      if (isNaN(guessednumber) || guessednumber < 1 || guessednumber > 20) {
+        resultMessage.innerHTML =
+          "<h3 style='color: orange;'>Enter a valid number between 1 and 20.</h3>";
+        return;
+      }
+
+      if (count >= 10 && win === false) {
+        resultMessage.innerHTML = "<h2 style='color: red;'>You lost! 😢</h2>";
+        setTimeout(() => {
+          location.reload();
+        }, 3000);
+        return;
+      }
+
+      count++;
+      guessarry.innerHTML += ` ${guessednumber},`;
+
+      if (guessednumber === computernumber) {
+        win = true;
+        resultMessage.innerHTML =
+          "<h2 style='color: green; font-size: 32px;'>You won! </h2>";
+      } else {
+        let val = 10 - count;
+
+        resultMessage.innerHTML = `<h3 style="color: blue;">Chances left: ${val}</h3>`;
+      }
+    });
+  </script>
+</html>

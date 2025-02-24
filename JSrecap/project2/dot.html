@@ -16,6 +16,7 @@
   <body>
     <header>BMI CALCULATOR</header>
     <main>
+      <form action="get" class="form">
       Enter your Weight :
       <input type="text" id="w" placeholder="enter your weight " />
       <br />
@@ -23,28 +24,53 @@
       <br />
       enter your height :<input
         type="text"
-        id="w"
+        id="h"
         placeholder="enter your weight "
       />
       <br>      <br>      <br>
 
 <button id="submit"> submit </button>
+</form>
 
     </main>
   </body>
   <script>
-    let btn = document.getElementById("submit");
+    let form = document.querySelector(".form");
+    let body= document.querySelector('body');
+    form.addEventListener('submit',(e)=>
+    {
+      e.preventDefault();
+      let w= parseInt(document.getElementById('w').value);
+      console.log(w);
+      let h = parseInt(document.getElementById('h').value);
+      console.log(h);
+      let bmi =( (w /(h*h ) )* 10000 ).toFixed(6) ;
+      if( isNaN(w) || isNaN(h))
+      {
+        let h1= document.createElement('h1');
+      h1.innerText= `Enter a valid number `;
+      body.appendChild(h1);
+      }else{
 
-btn.addEventListener("click", () => {
-    let weight = document.getElementById("w").innerText.trim(); // Trim spaces
-    let numericWeight = Number(weight);
+      let h1= document.createElement('h1');
+      h1.innerText= `the BMI : ${bmi}`;
+      body.appendChild(h1);
 
-    if (!isNaN(numericWeight)) {
-        console.log(numericWeight); 
-    } else {
-        console.log("Invalid number in #w element");
-    }
-});
+      let p = document.createElement('p');
+      if(bmi < 13.6)
+      {
+        p.innerHTML= "<h2 style='color:red'> under weight </h2>"
+        body.appendChild(p);
+      }else if(bmi > 13.6 && bmi <25 )
+      {
+        p.innerHTML=" <h2 style='color:green'> your weight is correct  </h2>"
+        body.appendChild(p);
+      }else{
+        p.innerHTML= "<h2 style='color:red'> over  weight </h2>"
+        body.appendChild(p);
+      }
+      }
 
-  </script>
+    })
+    </script>
 </html>

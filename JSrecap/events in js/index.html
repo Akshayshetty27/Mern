@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+    <style>
+      .images {
+        height: 100%;
+        gap: 100px;
+
+        display: flex;
+        flex-direction: column;
+      }
+      img {
+        height: 200px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="images">
+      <ul>
+        <li><img id="one" src="mite.jpg.jpg" /></li>
+        <li><img id="two" src="tmp2s8lbm0o.PNG" /></li>
+        <li><img id="three" src="workflow.webp" /></li>
+        <li>
+            <a href="https://www.google.com" target="_blank">Click here to open Google</a>
+        
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    document.getElementById("one").addEventListener(
+      "click",
+      (e) => {
+        e.stopPropagation();
+
+        console.log("Clicked inside ul");
+      },
+      false
+    );
+
+    document.getElementById("two").addEventListener(
+      "click",
+      (e) => {
+        e.stopPropagation();
+        console.log("Clicked inside second ul ");
+      },
+      true
+    );
+
+    document.getElementById("three").addEventListener(
+      "click",
+      (e) => {
+        e.stopPropagation();
+        console.log("Clicked third ");
+      },
+      true
+    );
+
+    document.querySelector("a").addEventListener(
+      "click",
+      (e) => {
+        console.log("google");
+      },
+      false
+    );
+
+     document.querySelector('ul').addEventListener('click',(e)=>{
+        console.log(e.target.parentNode);
+    e.target.parentNode.remove()
+
+    },true);
+
+
+
+  </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change color</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h1>White</h1>
+      <button id="start">start</button>
+      <button id="stop">stop</button>
+    </div>
+  </body>
+  <script>
+    let arr = [
+      "red",
+      "yellow",
+      "black",
+      "grey",
+      "green",
+      "plum",
+      "yellowgreen",
+      "cyan",
+      "orange",
+    ];
+    console.log(arr.length);
+
+    let start = document.getElementById("start");
+    let con = document.querySelector("h1");
+    let stop = document.getElementById("stop");
+
+    start.addEventListener("click", () => {
+      intervalID = setInterval(() => {
+        let num = Math.floor(Math.random() * 9);
+        let color = arr[num];
+        if(color == " black")
+        {
+            con.style.color="white";
+        }
+        document.body.style.background = color;
+        con.textContent = `${color}`;
+
+        console.log("hello", num);
+      }, 1000);
+    });
+
+    stop.addEventListener("click", () => {
+      let clr = document.body.style.backgroundColor;
+      document.body.style.background = clr;
+      clearInterval(intervalID);
+    });
+  </script>
+</html>

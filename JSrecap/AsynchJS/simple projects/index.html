@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CODE HERE</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let btn = document.getElementById("stop");
+    let h1con = document.querySelector("h1");
+
+    btn.addEventListener("click", () => {
+      setTimeout(() => {
+        console.log("hello");
+        h1con.innerHTML = "<h1> Practic...</h1>";
+      }, 2000);
+    });
+  </script>
+</html>

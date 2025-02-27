@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lexical analyzer in JS</title>
+  </head>
+  <body>
+    <h2>
+      the function defined inside the main function the inner function has the
+      access to variables of the outer function thus , this is c alled Lexical
+      analyzers
+    </h2>
+
+    <h2></h2>
+
+    <button>orange</button>
+  </body>
+  <script>
+    //lexical analyzer
+    function init() {
+      let name = " MOZILLA";
+
+      function display() {
+        console.log(name);
+      }
+
+      display();
+    }
+    init();
+
+    //  closure
+
+    function main() {
+      let a = 10;
+      function b() {
+        console.log(a);
+      }
+      return b;
+    }
+
+    main();
+  </script>
+</html>

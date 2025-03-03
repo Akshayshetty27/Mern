@@ -3,36 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Netflix Clone</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main">
       <nav>
         <span>
-          <img src="assets/images/netfllixlogo.jpg" width="53" />
+          <img src="assets/images/netfllixlogo.jpg" alt="Netflix Logo" />
         </span>
         <div>
-          s
-          <button class="btn">english</button>
-          <button class="btn red-sm">sign-in</button>
+          <button class="btn">English</button>
+          <button class="btn red-sm">Sign In</button>
         </div>
       </nav>
+
       <div class="box"></div>
 
       <div class="hero">
-        <span> Unlimited movies, TV shows and more </span>
-        <span> Starts at ₹149. Cancel at any time. </span>
+        <span>Unlimited movies, TV shows and more</span>
+        <span>Starts at ₹149. Cancel anytime.</span>
         <span>
           Ready to watch? Enter your email to create or restart your membership.
         </span>
-        <div>
-          <input type="text" placeholder="enter your email " class="inp" />
-          <button class="btn btn-red">Get- started</button>
+        <div class="input-container">
+          <input type="text" placeholder="Enter your email" class="inp" />
+          <button class="btn btn-red">Get Started</button>
         </div>
       </div>
 
       <div class="sep"></div>
     </div>
+
+    <section class="movies">
+      <h2>Popular on Netflix</h2>
+      <div class="movie-slider">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <div class="movies-container">
+          <img src="assets/images/movie1.png" alt="Movie 1" />
+          <img src="assets/images/movie2.jpeg" alt="Movie 2" />
+          <img src="assets/images/movie3.jpeg" alt="Movie 3" />
+          <img src="assets/images/movie4.jpeg" alt="Movie 4" />
+          <img src="assets/images/movie5.jpeg" alt="Movie 5" />
+        </div>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </section>
+
+    <div class="sep"></div>
+
+    <footer>
+      <p>Questions? Call 000-800-919-1694</p>
+      <div class="footer-links">
+        <a href="#">FAQ</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Help Center</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
